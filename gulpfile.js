@@ -5,6 +5,7 @@ var webpack = require('webpack-stream');
 var notify = require('gulp-notify');
 var path = require('path');
 var sourcemaps = require('gulp-sourcemaps');
+var concat = require('gulp-concat');
 
 var onError = function(err) {
   notify.onError({
@@ -59,8 +60,8 @@ gulp.task('copy-react-dom', function() {
 
 // Concatenate jsFiles.vendor and jsFiles.source into one JS file.
 // Run copy-react and eslint before concatenating
-gulp.task('concat-vendor', ['copy-react', 'copy-react-dom', 'eslint'], function() {
-  return gulp.src('js/vendor/*')
+gulp.task('concat-vendor', ['copy-react', 'copy-react-dom'], function() {
+  return gulp.src(['js/vendor/react.js', 'js/vendor/react-dom.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('vendor.js'))
     .pipe(sourcemaps.write('./'))

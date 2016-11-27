@@ -67,9 +67,9 @@
 	//import {routes} from "./routes";
 	//import {Router} from "react-router";
 	//import "./styles/base.css";
-	//<AppContainer />
+
 	/* JSX:*/
-	_reactDom2.default.render(_react2.default.DOM.h1(null, 'hello'), document.getElementById('app'));
+	_reactDom2.default.render(_react2.default.createElement(_appContainer2.default, null), document.getElementById('app'));
 
 	// Add the client app start up code to a function as window.webappStart.
 	// The webapp's full HTML will check and call it once the js-content

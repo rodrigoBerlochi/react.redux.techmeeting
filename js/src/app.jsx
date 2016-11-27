@@ -11,10 +11,10 @@ import AppContainer from './components/app.container.jsx';
 //import {routes} from "./routes";
 //import {Router} from "react-router";
 //import "./styles/base.css";
-//<AppContainer />
+
 /* JSX:*/ 
 ReactDOM.render(
-    React.DOM.h1(null, 'hello'),
+    <AppContainer />,
     document.getElementById('app')    
 );
 
